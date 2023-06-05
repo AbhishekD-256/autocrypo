@@ -3,12 +3,35 @@ body {
     color: $text-primary-color;
     font-family: 'Rubik', sans-serif;
 }
+
 .container{
     max-width: 1210px;
     margin: 0 auto;
     padding: 0 16px;
 }
-.hero{
+
+header {
+    padding: 25px 0;
+    background-color: $primary-color;
+
+    a {
+        color: $text-secondary-color;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 2.23;
+    }
+}
+
+.main-nav {
+    gap: 37px;
+}
+
+.hero {
+    height: 100vh;
+    max-height: 1300px;
     background-color: $primary-color;
     color: $text-secondary-color;
 }

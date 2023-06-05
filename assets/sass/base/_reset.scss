@@ -25,3 +25,9 @@ table, tbody, td, th, thead, time, tr, tt, ul, var, video {
  a {
     text-decoration: none;
  }
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

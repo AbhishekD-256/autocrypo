@@ -26,6 +26,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 .text-md {
   font-size: 16px;
   line-height: 2;
@@ -35,6 +41,44 @@ a {
 }
 .text-md--dark {
   color: #5b6c94;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-lg, .btn-md, .btn-sm {
+  background-color: #1fdb84;
+  border-radius: 5px;
+  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-sm {
+  padding: 4px 25px;
+  border-radius: 5px;
+  line-height: 2.13;
+}
+
+.btn-md {
+  padding: 18px 45px;
+  border-radius: 10px;
+  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+}
+
+.btn-lg {
+  padding: 21px 46px;
+  letter-spacing: 1px;
 }
 
 body {
@@ -49,7 +93,26 @@ body {
   padding: 0 16px;
 }
 
+header {
+  padding: 25px 0;
+  background-color: #313a5a;
+}
+header a {
+  color: #ffffff;
+}
+header .logo {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 2.23;
+}
+
+.main-nav {
+  gap: 37px;
+}
+
 .hero {
+  height: 100vh;
+  max-height: 1300px;
   background-color: #313a5a;
   color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

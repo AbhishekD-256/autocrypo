@@ -1,5 +1,14 @@
-body{
+body {
     background-color: #f8f9fc;
     color: $text-primary-color;
     font-family: 'Rubik', sans-serif;
+}
+.container{
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.hero{
+    background-color: $primary-color;
+    color: $text-secondary-color;
 }

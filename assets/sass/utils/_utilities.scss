@@ -1,0 +1,11 @@
+.text-md {
+    font-size: 16px;
+    line-height: 2;
+
+    &--light {
+        color: $text-secondary-color;
+    }
+    &--dark {
+        color: $text-primary-color;
+    }
+}

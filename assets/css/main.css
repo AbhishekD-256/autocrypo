@@ -26,8 +26,30 @@ a {
   text-decoration: none;
 }
 
+.text-md {
+  font-size: 16px;
+  line-height: 2;
+}
+.text-md--light {
+  color: #ffffff;
+}
+.text-md--dark {
+  color: #5b6c94;
+}
+
 body {
   background-color: #f8f9fc;
   color: #5b6c94;
   font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero {
+  background-color: #313a5a;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

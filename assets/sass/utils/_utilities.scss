@@ -1,5 +1,5 @@
 .text-md {
-    font-size: 16px;
+    font-size: $base-font-size;
     line-height: 2;
 
     &--light {
@@ -8,6 +8,26 @@
     &--dark {
         color: $text-primary-color;
     }
+}
+
+.text-lg {
+    font-size: 20px;
+    color:$primary-color;
+}
+
+.title-lg {
+    line-height: 1.6;
+    font-size: 40px;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.text-up{
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .f-center{
@@ -27,7 +47,7 @@
     border-radius: 5px;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
     color: $text-secondary-color;
-    font-size: 16px;
+    font-size: $base-font-size;
     font-weight: bold;
 
 }

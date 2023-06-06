@@ -2,6 +2,7 @@ body {
     background-color: #f8f9fc;
     color: $text-primary-color;
     font-family: 'Rubik', sans-serif;
+    font-size: $base-font-size;
 }
 
 .container{
@@ -25,13 +26,235 @@ header {
     }
 }
 
-.main-nav {
+.main-nav ,
+.button-wrap
+{
     gap: 37px;
 }
 
 .hero {
-    height: 100vh;
     max-height: 1300px;
     background-color: $primary-color;
     color: $text-secondary-color;
+
+    &__content {
+        max-width: 550px;
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    p {
+        margin-bottom: 35px;
+    }
+
+    &__banner {
+        max-height: 792px;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.benifits {
+    .container {
+        padding: 60px 78px ;
+        border-radius: 10px;
+        background-color: $text-secondary-color;
+        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+        transform: translateY(-95px);
+    }
+
+    &-items {
+        gap: 100px;
+
+        &__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 6px;
+            margin-bottom: 26px;
+            background-color:rgba(31, 219, 132, 0.1);
+
+            img {
+                width: 40px;
+                height: 33px;
+            }
+        }
+
+        h3{
+            position: relative;
+            padding-bottom: 28px;
+
+            &::after{
+                content: '';
+                width: 60px;
+                height: 4px;
+                background-color: $secondary-color;
+                position: absolute;
+                top: 48px;
+                left: 0;
+            }
+  
+        }
+
+        p{
+             margin-top: 18px;   
+        }
+
+    }
+}
+
+.pricing {
+    padding-bottom: 200px;
+    .container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    h2.title-lg {
+        max-width: 800px;
+    }
+
+    &__card {
+        height: 70vh;
+        min-height: 500px;
+        max-height: 700px;
+        padding: 56px 62px;
+        flex-direction: column;
+
+        h3 {
+            margin-bottom: 31px;
+        }
+
+        .price{
+            display: block;
+            font-size: 72px;
+            color: $secondary-color;
+        }
+
+        &.active{
+            position: relative;
+            background-color: $text-secondary-color;
+            box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #0a8aff;
+                
+            }
+        }
+    }
+}
+
+.plan-toggler {
+    border-radius: 5px;
+    border: solid 1px #aefdd9;    
+    font-size: $base-font-size;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #6fdeaa;
+    background-color: #f1fff8;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.monthly {
+    display: inline-block;
+    padding: 20px 35px;
+    border-right: solid 1px #aefdd9;
+
+    &.active{
+       @include active-price;
+    }
+}
+
+.yearly{
+    padding: 20px 30px 20px 40px;
+
+    &.active{
+      @include active-price;
+    }
+}
+
+.testimonials {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 40%;
+        height: 100%;
+        width: 60%;
+        background-color: $primary-color;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 40%;
+        background-image: url('../../images/quote-bg.png');
+    }
+    &-cards {
+        gap: 20px;
+
+        &__card {
+            padding: 80px 60px 63px 50px;
+            border-radius: 6px;
+            box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    }
+    .dot-wrap {
+        padding: 90px 0;
+        gap: 16px;
+    }
+    .dot {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 3px $text-secondary-color;
+    }
+}
+
+.clients {
+    padding: 180px 0;
+
+    h2 {
+        margin-bottom: 45px;
+    }
+    &-wrapper {
+        gap: 48px;
+    }
+}
+
+footer {
+    padding-bottom: 100px;
+
+    a {
+        color: $text-primary-color;
+    }
+
+    .#{&}-nav {
+        margin-top: 50px;
+        gap: 40px;
+
+        li:not(:last-child)::after {
+            content: "/";
+            margin-left: 40px;
+          } 
+    }
 }

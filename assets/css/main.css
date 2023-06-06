@@ -43,6 +43,26 @@ button {
   color: #5b6c94;
 }
 
+.text-lg {
+  font-size: 20px;
+  color: #313a5a;
+}
+
+.title-lg {
+  line-height: 1.6;
+  font-size: 40px;
+  font-weight: bold;
+  color: #313a5a;
+}
+
+.text-up {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .f-center {
   display: flex;
   align-items: center;
@@ -85,6 +105,7 @@ body {
   background-color: #f8f9fc;
   color: #5b6c94;
   font-family: "Rubik", sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -106,13 +127,207 @@ header .logo {
   line-height: 2.23;
 }
 
-.main-nav {
+.main-nav,
+.button-wrap {
   gap: 37px;
 }
 
 .hero {
-  height: 100vh;
   max-height: 1300px;
   background-color: #313a5a;
   color: #ffffff;
+}
+.hero__content {
+  max-width: 550px;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.hero p {
+  margin-bottom: 35px;
+}
+.hero__banner {
+  max-height: 792px;
+}
+.hero__banner img {
+  height: 100%;
+}
+
+.benifits .container {
+  padding: 60px 78px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  transform: translateY(-95px);
+}
+.benifits-items {
+  gap: 100px;
+}
+.benifits-items__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  margin-bottom: 26px;
+  background-color: rgba(31, 219, 132, 0.1);
+}
+.benifits-items__icon img {
+  width: 40px;
+  height: 33px;
+}
+.benifits-items h3 {
+  position: relative;
+  padding-bottom: 28px;
+}
+.benifits-items h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #1fdb84;
+  position: absolute;
+  top: 48px;
+  left: 0;
+}
+.benifits-items p {
+  margin-top: 18px;
+}
+
+.pricing {
+  padding-bottom: 200px;
+}
+.pricing .container {
+  flex-direction: column;
+  gap: 60px;
+}
+.pricing h2.title-lg {
+  max-width: 800px;
+}
+.pricing__card {
+  height: 70vh;
+  min-height: 500px;
+  max-height: 700px;
+  padding: 56px 62px;
+  flex-direction: column;
+}
+.pricing__card h3 {
+  margin-bottom: 31px;
+}
+.pricing__card .price {
+  display: block;
+  font-size: 72px;
+  color: #1fdb84;
+}
+.pricing__card.active {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+}
+.pricing__card.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0a8aff;
+}
+
+.plan-toggler {
+  border-radius: 5px;
+  border: solid 1px #aefdd9;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #6fdeaa;
+  background-color: #f1fff8;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.monthly {
+  display: inline-block;
+  padding: 20px 35px;
+  border-right: solid 1px #aefdd9;
+}
+.monthly.active {
+  background-color: #ffffff;
+  color: #1fdb84;
+}
+
+.yearly {
+  padding: 20px 30px 20px 40px;
+}
+.yearly.active {
+  background-color: #ffffff;
+  color: #1fdb84;
+}
+
+.testimonials {
+  position: relative;
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 40%;
+  height: 100%;
+  width: 60%;
+  background-color: #313a5a;
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background-image: url("../../images/quote-bg.png");
+}
+.testimonials-cards {
+  gap: 20px;
+}
+.testimonials-cards__card {
+  padding: 80px 60px 63px 50px;
+  border-radius: 6px;
+  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.testimonials .dot-wrap {
+  padding: 90px 0;
+  gap: 16px;
+}
+.testimonials .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 3px #ffffff;
+}
+
+.clients {
+  padding: 180px 0;
+}
+.clients h2 {
+  margin-bottom: 45px;
+}
+.clients-wrapper {
+  gap: 48px;
+}
+
+footer {
+  padding-bottom: 100px;
+}
+footer a {
+  color: #5b6c94;
+}
+footer .footer-nav {
+  margin-top: 50px;
+  gap: 40px;
+}
+footer .footer-nav li:not(:last-child)::after {
+  content: "/";
+  margin-left: 40px;
 }/*# sourceMappingURL=main.css.map */

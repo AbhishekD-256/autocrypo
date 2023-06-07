@@ -1,0 +1,29 @@
+
+%btn {
+    background-color: $secondary-color;
+    border-radius: 5px;
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+    color: $text-secondary-color;
+    font-size: $base-font-size;
+    font-weight: bold;
+}
+
+.btn-sm {
+    @extend %btn;
+    padding: 4px 25px;
+    border-radius: 5px;
+    line-height: 2.13;
+}
+
+.btn-md {
+    @extend %btn;
+    padding: 18px 45px;
+    border-radius: 10px;
+    box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+}
+
+.btn-lg {
+    @extend %btn;
+    padding: 21px 42px;
+    letter-spacing: 1px;
+}

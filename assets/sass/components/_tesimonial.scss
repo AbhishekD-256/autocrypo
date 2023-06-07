@@ -1,17 +1,19 @@
 .testimonials-cards__card {
+    $container-width: 100%; 
+    $space: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // width: 400px;
+    max-width: calc(#{$container-width} - #{$space} / 5);
     height: 500px;
     padding: 80px 60px 63px 50px;
     border-radius: 6px;
     box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
     background-color: rgba(255, 255, 255, 0.95);
-    // flex-shrink: 0 ;
-
+    
     q {
         width: 300px;
+        max-width: 100%;
     }
 
     &.active {

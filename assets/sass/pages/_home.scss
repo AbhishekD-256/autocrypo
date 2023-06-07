@@ -11,81 +11,11 @@ body {
     padding: 0 16px;
 }
 
-header {
-    padding: 25px 0;
-    background-color: $primary-color;
-    position: relative;
-
-    a {
-        color: $text-secondary-color;
-    }
-
-    .logo {
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 2.23;
-    }
-
-    @include tablet {
-        .main-nav {
-            position: absolute;
-            right: 0;
-            top: 90px;
-            flex-direction: column;
-            width: 100%;
-            // height: fit-content;
-            padding: 50px;
-            // overflow: hidden;
-            background-color: $primary-color;
-            box-shadow: 2px 19px 19px -9px rgba(0,0,0,0.75);
-        }
-    }
-}
-
-.menu-btn {
-    display: none;
-    cursor: pointer;
-    @include tablet {
-        display: block;
-    }
-
-    .ham-bar {
-        position: relative;
-        width: 25px;
-        height: 3px;
-        background-color: $secondary-color;
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            top: -8px;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: $secondary-color;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 8px;
-            left: 0;
-            width: 28px;
-            height: 3px;
-            background-color: $secondary-color;
-        }
-    }
-
-}
-
-.main-nav ,
-.button-wrap
-{
-    gap: 37px;
-}
-
 .hero {
+    position: relative;
     min-height: 600px;
+    max-height: 900px;
+    height: 90vh;
     background-color: $primary-color;
     color: $text-secondary-color;
     
@@ -94,7 +24,8 @@ header {
     }
 
     &__content {
-        flex-shrink: 2;
+        position: relative;
+        z-index: 2;
         max-width: 550px;
     }
 
@@ -109,12 +40,23 @@ header {
     }
 
     &__banner {
-        width: 460px;
+        width: 400px;
 
         img {
          width: 100%;
+         vertical-align: middle;
         }
     }
+
+}
+
+@include laptop {
+    .hero__banner {
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        width: 300px;
+    }  
 }
 
 .benifits {
@@ -124,37 +66,13 @@ header {
         background-color: $text-secondary-color;
         box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
         transform: translateY(-95px);
-
-        @include laptop {
-            transform: translateY(0);
-            box-shadow: none;
-            margin-bottom: 100px;
-            padding: 60px 16px;
-        }
     }
 
     &-items {
         gap: 100px;
-       
-       
 
-        @include laptop {
-            gap: 50px;
-        }
-
-        @include tablet {
-            flex-wrap: wrap;
-        }
-        
         &__item {
             width: 300px;
-            
-            @include tablet {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
         }
 
         &__icon {
@@ -174,10 +92,6 @@ header {
             position: relative;
             padding-bottom: 28px;
 
-            @include tablet {
-                padding-bottom: 10px;
-            }
-
             &::after {
                 content: '';
                 width: 60px;
@@ -186,10 +100,6 @@ header {
                 position: absolute;
                 left: 0;
                 bottom: 0;
-
-                @include tablet {
-                    width: 100%;
-                }
             }
   
         }
@@ -198,6 +108,44 @@ header {
              margin-top: 18px;   
         }
 
+    }
+}
+
+@include laptop {
+    .benifits {
+        .container {
+            transform: translateY(0);
+            box-shadow: none;
+            margin-bottom: 100px;
+            padding: 60px 16px;
+        }
+
+        &-items {
+                gap: 50px;
+            }
+    }
+}
+
+@include tablet {
+    .benifits {
+        &-item {
+            flex-wrap: wrap;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                h3 {
+                    padding-bottom: 10px;
+                }
+
+                h3::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -210,16 +158,13 @@ header {
 
     h2.title-lg {
         max-width: 800px;
-    }
+    } 
+}
+
+@include laptop {
     .card-wrap {
-        gap: 24px;
-
-        @include laptop {
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
     }
-
-    
 }
 
 .plan-toggler {
@@ -253,10 +198,7 @@ header {
 }
 
 .testimonials {
-    background: url('../images/quote-bg.png'), linear-gradient(to right, $primary-color, $primary-color) ;
-    background-repeat: no-repeat, no-repeat;
-    background-position: top left, top right;
-    background-size: 22%, 1000px;
+    background: url('../images/quote-bg.png') top left / 378px no-repeat, linear-gradient(to right, $primary-color, $primary-color) top right / 60% no-repeat;
     overflow: hidden;
 
     h2 {
@@ -267,12 +209,6 @@ header {
         gap: 20px;
         transform: translateX(40%);
     }
-
-    .dot-wrap {
-        padding: 90px 0;
-        gap: 16px;
-    }
-
 }
 
 .user-name {
@@ -280,12 +216,20 @@ header {
     font-weight: bold;
 }
 
+@include responsive(1200) {
+    .testimonials {
+        background: $primary-color;
+
+        h2 {
+            color: $text-secondary-color;
+            text-align: center;
+        }
+    }
+}
+
+
 .clients {
     padding: 180px 0;
-
-    @include tablet {
-        padding: 60px 0;
-    }
 
     h2 {
         margin-bottom: 45px;
@@ -293,45 +237,18 @@ header {
     &-wrapper {
         gap: 48px;
         flex-wrap: wrap;
-
-        @include laptop{
-            gap: 30px;
-        }
     }
 }
 
-footer {
-    padding-bottom: 100px;
-
-    @include tablet {
-        padding-bottom: 50px;
-    }
-
-    a {
-        color: $text-primary-color;
-    }
-
-    .#{&}-nav {
-        margin-top: 50px;
-        gap: 40px;
-
-        @include tablet {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        li:not(:last-child)::after {
-            content: "/";
-            margin-left: 40px;
-
-            @include tablet {
-                content: '';
-                margin-left: 0;
-            }
-          } 
-
-          @include tablet {
-            margin-top: 20px;
-          }
+@include laptop {
+    .clients-wrapper {
+        gap: 30px;
     }
 }
+
+@include tablet {
+    .clients {
+        padding: 60px 0;
+    }
+}
+

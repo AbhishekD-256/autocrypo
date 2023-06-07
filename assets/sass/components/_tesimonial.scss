@@ -1,0 +1,29 @@
+.testimonials-cards__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // width: 400px;
+    height: 500px;
+    padding: 80px 60px 63px 50px;
+    border-radius: 6px;
+    box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+    background-color: rgba(255, 255, 255, 0.95);
+    // flex-shrink: 0 ;
+
+    q {
+        width: 300px;
+    }
+
+    &.active {
+        color: $text-secondary-color;
+        background-color: $secondary-color;
+
+        svg g {
+            fill: $text-secondary-color;
+        }
+
+        .user-name{
+            color: $text-secondary-color;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+footer {
+    padding-bottom: 100px;
+
+    @include tablet {
+        padding-bottom: 50px;
+    }
+
+    a {
+        color: $text-primary-color;
+    }
+
+    .#{&}-nav {
+        margin-top: 50px;
+        gap: 40px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li:not(:last-child)::after {
+            content: "/";
+            margin-left: 40px;
+
+            @include tablet {
+                content: '';
+                margin-left: 0;
+            }
+          } 
+
+          @include tablet {
+            margin-top: 20px;
+          }
+    }
+}

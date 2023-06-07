@@ -219,47 +219,7 @@ header {
         }
     }
 
-    &__card {
-        border-radius: 10px;
-        height: 70vh;
-        max-width: 378px;
-        min-height: 500px;
-        max-height: 700px;
-        padding: 56px 62px;
-        flex-direction: column;
-        overflow: hidden;
-
-        @include laptop {
-            box-shadow: 0 1px 2px 0 rgba(48, 58, 71, 0.2);
-        }
-
-        h3 {
-            margin-bottom: 31px;
-        }
-
-        .price{
-            display: block;
-            font-size: 72px;
-            color: $secondary-color;
-        }
-
-        &.active {
-            position: relative;
-            background-color: $text-secondary-color;
-            box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 3px;
-                background-color: #0a8aff;
-                
-            }
-        }
-    }
+    
 }
 
 .plan-toggler {
@@ -304,57 +264,15 @@ header {
     }
 
     &-cards {
-
         gap: 20px;
         transform: translateX(40%);
-        
     }
-    
-    &-cards__card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // width: 400px;
-        height: 500px;
-        padding: 80px 60px 63px 50px;
-        border-radius: 6px;
-        box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
-        background-color: rgba(255, 255, 255, 0.95);
-        // flex-shrink: 0 ;
 
-        q {
-            width: 300px;
-        }
-
-        &.active {
-            color: $text-secondary-color;
-            background-color: $secondary-color;
-
-            svg g {
-                fill: $text-secondary-color;
-            }
-
-            .user-name{
-                color: $text-secondary-color;
-            }
-        }
-    }
     .dot-wrap {
         padding: 90px 0;
         gap: 16px;
     }
-    .dot {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: solid 3px $text-secondary-color;
-        cursor: pointer;
 
-        &.active {
-            background-color: $text-secondary-color;
-        }
-    }
 }
 
 .user-name {

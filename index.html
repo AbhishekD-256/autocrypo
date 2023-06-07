@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>autocryp</title>
+    <title>autocrypo</title>
 </head>
 
 <body>
@@ -29,6 +29,9 @@
             <div class="button-wrap  f-center">
                 <a href="javascript:void(0)">Login</a>
                 <button class="btn-sm">Register</button>
+                <div class="menu-btn">
+                    <div class="ham-bar"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -99,7 +102,7 @@
                     <span class="monthly  active  text-up">MONTHLY</span>
                     <span class="yearly  text-up">YEARLY - 2 MONTH FREE</span>
                 </div>
-                <ul class="f-center  text-center">
+                <ul class="card-wrap f-center  text-center">
                     <li class="pricing__card  f-space">
                         <div class="pricing__card-header">
                             <h3 class="text-lg">Starter</h3>
@@ -149,49 +152,79 @@
 
         <section class="testimonials">
             <div class="container">
-                <h2 class="title-lg">What Customers Say</h2>
+                <h2 class="title-lg">What <br>Customers Say</h2>
                 <ul class="testimonials-cards  f-center">
-                    <li class="testimonials-cards__card">
-                        <figure><img src="assets/images/quote.svg" alt="quote"></figure>
+                    <li class="testimonials-cards__card  active" data-card="1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
+                            <g fill="#1FDB84" fill-rule="evenodd">
+                                <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
+                            </g>
+                        </svg>
+
                         <q class="text-md">I started driving with Uber because I liked the idea that my own car could
                             make
                             me money. After
                             just about a couple weeks, I saw that this was something I wanted to do permanently.</q>
-                        <span>Brandon Roger /</span>
-                        <span>OWW Studio</span>
+                        <div class="user">
+                            <span class="user-name">Brandon Roger /</span>
+                            <span>OWW Studio</span>
+                        </div>
                     </li>
 
-                    <li class="testimonials-cards__card">
-                        <figure><img src="assets/images/quote.svg" alt="quote"></figure>
+                    <li class="testimonials-cards__card" data-card="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
+                            <g fill="#1FDB84" fill-rule="evenodd">
+                                <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
+                            </g>
+                        </svg>
+
                         <q class="text-md">I wanted something where I could meet new people and get out of the house.
                             Uber
                             has helped with
                             both of those things, plus I’m seeing new parts of the city I’ve never seen before!</q>
-                        <span>Brandon Roger /</span>
-                        <span>OWW Studio</span>
+                        <div class="user">
+                            <span class="user-name">Sean Walker /</span>
+                            <span>OWW Studio</span>
+                        </div>
                     </li>
 
-                    <li class="testimonials-cards__card">
-                        <figure><img src="assets/images/quote.svg" alt="quote"></figure>
+                    <li class="testimonials-cards__card" data-card="3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
+                            <g fill="#1FDB84" fill-rule="evenodd">
+                                <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
+                            </g>
+                        </svg>
+
                         <q class="text-md">"Uber enables me to have the creative freedom for baking my cakes and also
                             driving on the side so
                             I can make more money and also have my dream job."</q>
-                        <span>Jenny Harra /</span>
-                        <span>OWW Studio</span>
+                        <div class="user">
+                            <span class="user-name">Jenny Harra /</span>
+                            <span>OWW Studio</span>
+                        </div>
                     </li>
 
-                    <li class="testimonials-cards__card">
-                        <figure><img src="assets/images/quote.svg" alt="quote"></figure>
+                    <li class="testimonials-cards__card" data-card="4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
+                            <g fill="#1FDB84" fill-rule="evenodd">
+                                <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
+                            </g>
+                        </svg>
+
                         <q class="text-md">I wanted something where I could meet new people and get out of the house.
                             Uber
                             has helped with
                             both of those things, plus I’m seeing new parts of the city I’ve never seen before!</q>
-                        <span>Sean Walker /</span>
-                        <span>OWW Studio</span>
+
+                        <div class="user">
+                            <span class="user-name">Sean Walker /</span>
+                            <span>OWW Studio</span>
+                        </div>
+
                     </li>
                 </ul>
                 <div class="dot-wrap  f-center">
-                    <span class="dot"></span>
+                    <span class="dot  active"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>

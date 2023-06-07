@@ -1,13 +1,6 @@
 .text-md {
     font-size: $base-font-size;
     line-height: 2;
-
-    &--light {
-        color: $text-secondary-color;
-    }
-    &--dark {
-        color: $text-primary-color;
-    }
 }
 
 .text-lg {
@@ -49,7 +42,6 @@
     color: $text-secondary-color;
     font-size: $base-font-size;
     font-weight: bold;
-
 }
 
 .btn-sm {
@@ -68,6 +60,6 @@
 
 .btn-lg {
     @extend %btn;
-    padding: 21px 46px;
+    padding: 21px 42px;
     letter-spacing: 1px;
 }

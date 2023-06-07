@@ -1,4 +1,4 @@
-* {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,12 +35,6 @@ button {
 .text-md {
   font-size: 16px;
   line-height: 2;
-}
-.text-md--light {
-  color: #ffffff;
-}
-.text-md--dark {
-  color: #5b6c94;
 }
 
 .text-lg {
@@ -97,7 +91,7 @@ button {
 }
 
 .btn-lg {
-  padding: 21px 46px;
+  padding: 21px 42px;
   letter-spacing: 1px;
 }
 
@@ -117,6 +111,7 @@ body {
 header {
   padding: 25px 0;
   background-color: #313a5a;
+  position: relative;
 }
 header a {
   color: #ffffff;
@@ -126,6 +121,54 @@ header .logo {
   font-weight: 500;
   line-height: 2.23;
 }
+@media screen and (max-width: 768px) {
+  header .main-nav {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px;
+    background-color: #313a5a;
+    box-shadow: 2px 19px 19px -9px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
+.menu-btn .ham-bar {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background-color: #1fdb84;
+}
+.menu-btn .ham-bar::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -8px;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #1fdb84;
+}
+.menu-btn .ham-bar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background-color: #1fdb84;
+}
 
 .main-nav,
 .button-wrap {
@@ -133,11 +176,15 @@ header .logo {
 }
 
 .hero {
-  max-height: 1300px;
+  min-height: 600px;
   background-color: #313a5a;
   color: #ffffff;
 }
+.hero .container {
+  height: 100%;
+}
 .hero__content {
+  flex-shrink: 2;
   max-width: 550px;
 }
 .hero h1 {
@@ -149,10 +196,10 @@ header .logo {
   margin-bottom: 35px;
 }
 .hero__banner {
-  max-height: 792px;
+  width: 460px;
 }
 .hero__banner img {
-  height: 100%;
+  width: 100%;
 }
 
 .benifits .container {
@@ -162,8 +209,37 @@ header .logo {
   box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
   transform: translateY(-95px);
 }
+@media screen and (max-width: 1024px) {
+  .benifits .container {
+    transform: translateY(0);
+    box-shadow: none;
+    margin-bottom: 100px;
+    padding: 60px 16px;
+  }
+}
 .benifits-items {
   gap: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .benifits-items {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .benifits-items {
+    flex-wrap: wrap;
+  }
+}
+.benifits-items__item {
+  width: 300px;
+}
+@media screen and (max-width: 768px) {
+  .benifits-items__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .benifits-items__icon {
   width: 72px;
@@ -180,14 +256,24 @@ header .logo {
   position: relative;
   padding-bottom: 28px;
 }
+@media screen and (max-width: 768px) {
+  .benifits-items h3 {
+    padding-bottom: 10px;
+  }
+}
 .benifits-items h3::after {
   content: "";
   width: 60px;
   height: 4px;
   background-color: #1fdb84;
   position: absolute;
-  top: 48px;
   left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .benifits-items h3::after {
+    width: 100%;
+  }
 }
 .benifits-items p {
   margin-top: 18px;
@@ -203,12 +289,28 @@ header .logo {
 .pricing h2.title-lg {
   max-width: 800px;
 }
+.pricing .card-wrap {
+  gap: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .pricing .card-wrap {
+    flex-wrap: wrap;
+  }
+}
 .pricing__card {
+  border-radius: 10px;
   height: 70vh;
+  max-width: 378px;
   min-height: 500px;
   max-height: 700px;
   padding: 56px 62px;
   flex-direction: column;
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {
+  .pricing__card {
+    box-shadow: 0 1px 2px 0 rgba(48, 58, 71, 0.2);
+  }
 }
 .pricing__card h3 {
   margin-bottom: 31px;
@@ -264,36 +366,41 @@ header .logo {
 }
 
 .testimonials {
-  position: relative;
+  background: url("../images/quote-bg.png"), linear-gradient(to right, #313a5a, #313a5a);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+  background-size: 22%, 1000px;
+  overflow: hidden;
 }
-.testimonials::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 40%;
-  height: 100%;
-  width: 60%;
-  background-color: #313a5a;
-}
-.testimonials::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 40%;
-  background-image: url("../../images/quote-bg.png");
+.testimonials h2 {
+  padding: 70px 0;
 }
 .testimonials-cards {
   gap: 20px;
+  transform: translateX(40%);
 }
 .testimonials-cards__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
   padding: 80px 60px 63px 50px;
   border-radius: 6px;
   box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
   background-color: rgba(255, 255, 255, 0.95);
+}
+.testimonials-cards__card q {
+  width: 300px;
+}
+.testimonials-cards__card.active {
+  color: #ffffff;
+  background-color: #1fdb84;
+}
+.testimonials-cards__card.active svg g {
+  fill: #ffffff;
+}
+.testimonials-cards__card.active .user-name {
+  color: #ffffff;
 }
 .testimonials .dot-wrap {
   padding: 90px 0;
@@ -305,20 +412,45 @@ header .logo {
   height: 20px;
   border-radius: 50%;
   border: solid 3px #ffffff;
+  cursor: pointer;
+}
+.testimonials .dot.active {
+  background-color: #ffffff;
+}
+
+.user-name {
+  color: #313a5a;
+  font-weight: bold;
 }
 
 .clients {
   padding: 180px 0;
+}
+@media screen and (max-width: 768px) {
+  .clients {
+    padding: 60px 0;
+  }
 }
 .clients h2 {
   margin-bottom: 45px;
 }
 .clients-wrapper {
   gap: 48px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  .clients-wrapper {
+    gap: 30px;
+  }
 }
 
 footer {
   padding-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding-bottom: 50px;
+  }
 }
 footer a {
   color: #5b6c94;
@@ -327,7 +459,24 @@ footer .footer-nav {
   margin-top: 50px;
   gap: 40px;
 }
+@media screen and (max-width: 768px) {
+  footer .footer-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 footer .footer-nav li:not(:last-child)::after {
   content: "/";
   margin-left: 40px;
+}
+@media screen and (max-width: 768px) {
+  footer .footer-nav li:not(:last-child)::after {
+    content: "";
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .footer-nav {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -49,6 +49,23 @@ button {
   color: #313a5a;
 }
 
+.text-md {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.text-lg {
+  font-size: 20px;
+  color: #313a5a;
+}
+
+.title-lg {
+  line-height: 1.6;
+  font-size: 40px;
+  font-weight: bold;
+  color: #313a5a;
+}
+
 .text-up {
   text-transform: uppercase;
 }

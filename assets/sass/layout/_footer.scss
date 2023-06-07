@@ -28,7 +28,6 @@ footer {
         }
     }
     .footer-nav li:not(:last-child)::after {
-        content: '';
-        margin-left: 0;
+        display: none;
     }
 }

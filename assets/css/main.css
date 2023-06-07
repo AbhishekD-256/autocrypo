@@ -138,7 +138,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   max-width: calc(100% - 60px / 5);
-  height: 500px;
+  min-height: 500px;
   padding: 80px 60px 63px 50px;
   border-radius: 6px;
   box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
@@ -267,8 +267,7 @@ footer .footer-nav li:not(:last-child)::after {
     margin-top: 20px;
   }
   .footer-nav li:not(:last-child)::after {
-    content: "";
-    margin-left: 0;
+    display: none;
   }
 }
 body {
@@ -322,6 +321,7 @@ body {
     bottom: 0;
     right: 16px;
     width: 300px;
+    opacity: 0.5;
   }
 }
 .benifits .container {
@@ -377,20 +377,20 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .benifits-item {
-    flex-wrap: wrap;
+  .benifits-items {
+    flex-wrap: wrap-reverse;
   }
-  .benifits-item__item {
+  .benifits-items__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .benifits-item__item h3 {
-    padding-bottom: 10px;
+  .benifits-items__item h3 {
+    padding-bottom: 0;
   }
-  .benifits-item__item h3::after {
-    width: 100%;
+  .benifits-items__item h3::after {
+    display: none;
   }
 }
 .pricing {
@@ -402,6 +402,9 @@ body {
 }
 .pricing h2.title-lg {
   max-width: 800px;
+}
+.pricing .card-wrap {
+  gap: 24px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -448,7 +451,6 @@ body {
 }
 .testimonials-cards {
   gap: 20px;
-  transform: translateX(40%);
 }
 
 .user-name {

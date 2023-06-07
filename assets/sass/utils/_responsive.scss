@@ -21,3 +21,9 @@ $break-points: (
     @content;
   }
 }
+
+@mixin responsive($bp) {
+  @media screen and (max-width: #{$bp}px) {
+    @content;
+  }
+}

@@ -1,0 +1,72 @@
+header {
+    padding: 25px 0;
+    background-color: $primary-color;
+    position: relative;
+
+    a {
+        color: $text-secondary-color;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 2.23;
+    }
+
+    @include tablet {
+        .main-nav {
+            position: absolute;
+            right: 0;
+            top: 90px;
+            flex-direction: column;
+            width: 100%;
+            // height: fit-content;
+            padding: 50px;
+            // overflow: hidden;
+            background-color: $primary-color;
+            box-shadow: 2px 19px 19px -9px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    @include tablet {
+        display: block;
+    }
+
+    .ham-bar {
+        position: relative;
+        width: 25px;
+        height: 3px;
+        background-color: $secondary-color;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $secondary-color;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 8px;
+            left: 0;
+            width: 28px;
+            height: 3px;
+            background-color: $secondary-color;
+        }
+    }
+
+}
+
+.main-nav ,
+.button-wrap
+{
+    gap: 37px;
+}

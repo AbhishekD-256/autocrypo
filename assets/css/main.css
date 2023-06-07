@@ -49,23 +49,6 @@ button {
   color: #313a5a;
 }
 
-.text-md {
-  font-size: 16px;
-  line-height: 2;
-}
-
-.text-lg {
-  font-size: 20px;
-  color: #313a5a;
-}
-
-.title-lg {
-  line-height: 1.6;
-  font-size: 40px;
-  font-weight: bold;
-  color: #313a5a;
-}
-
 .text-up {
   text-transform: uppercase;
 }
@@ -112,30 +95,71 @@ button {
   letter-spacing: 1px;
 }
 
-.btn-sm, .btn-md, .btn-lg {
-  background-color: #1fdb84;
-  border-radius: 5px;
-  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+header {
+  padding: 25px 0;
+  background-color: #313a5a;
+  position: relative;
+}
+header a {
   color: #ffffff;
-  font-size: 16px;
-  font-weight: bold;
+}
+header .logo {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 2.23;
+}
+@media screen and (max-width: 768px) {
+  header .main-nav {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px;
+    background-color: #313a5a;
+    box-shadow: 2px 19px 19px -9px rgba(0, 0, 0, 0.75);
+  }
 }
 
-.btn-sm {
-  padding: 4px 25px;
-  border-radius: 5px;
-  line-height: 2.13;
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
+.menu-btn .ham-bar {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background-color: #1fdb84;
+}
+.menu-btn .ham-bar::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -8px;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #1fdb84;
+}
+.menu-btn .ham-bar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background-color: #1fdb84;
 }
 
-.btn-md {
-  padding: 18px 45px;
-  border-radius: 10px;
-  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
-}
-
-.btn-lg {
-  padding: 21px 42px;
-  letter-spacing: 1px;
+.main-nav,
+.button-wrap {
+  gap: 37px;
 }
 
 body {

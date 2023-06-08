@@ -19,30 +19,31 @@ header {
     cursor: pointer;
 
     .ham-bar {
+        display: inline-block;
         position: relative;
         width: 25px;
         height: 3px;
         background-color: $secondary-color;
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            top: -8px;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: $secondary-color;
-        }
 
+        &::before,
         &::after {
             content: '';
             position: absolute;
             display: block;
-            top: 8px;
             left: 0;
-            width: 28px;
             height: 3px;
             background-color: $secondary-color;
+        }
+
+        &::before {
+            top: -8px;
+            width: 20px;
+        }
+
+        &::after {
+            top: 8px;
+            width: 28px;
+            
         }
     }
 
@@ -64,10 +65,20 @@ header {
         top: 90px;
         flex-direction: column;
         width: 100%;
+        gap: 0;
+        height: 0;
         z-index: 100;
-        padding: 50px;
-        // overflow: hidden;
+        overflow: hidden;
         background-color: $primary-color;
         box-shadow: 2px 19px 19px -9px rgba(0,0,0,0.75);
+
+        li {
+            padding: 15px;
+
+            a:hover {
+                color: $secondary-color;
+            }
+        }
+
     }
 }

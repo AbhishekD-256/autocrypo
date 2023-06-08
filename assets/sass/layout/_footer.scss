@@ -9,10 +9,11 @@ footer {
         margin-top: 50px;
         gap: 40px;
 
-        li:not(:last-child)::after {
+        li + li::before {
             content: "/";
-            margin-left: 40px;
-          } 
+            margin-right: 40px;
+          }
+          
     }
 }
 
@@ -27,7 +28,7 @@ footer {
 
         }
     }
-    .footer-nav li:not(:last-child)::after {
+    li + li::before {
         display: none;
-    }
+      }
 }

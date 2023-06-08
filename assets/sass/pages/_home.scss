@@ -22,23 +22,19 @@ body {
     .container {
         height: 100%;
     }
-
     &__content {
         position: relative;
         z-index: 2;
         max-width: 550px;
     }
-
     h1 {
         font-size: 48px;
         font-weight: bold;
         margin-bottom: 40px;
     }
-
     p {
         margin-bottom: 35px;
     }
-
     &__banner {
         width: 400px;
 
@@ -47,20 +43,19 @@ body {
          vertical-align: middle;
         }
     }
-
+    @include laptop {
+        .hero__banner {
+            position: absolute;
+            bottom: 0;
+            right: 16px;
+            width: 300px;
+            opacity: 0.5;
+        }  
+    }
 }
 
-@include laptop {
-    .hero__banner {
-        position: absolute;
-        bottom: 0;
-        right: 16px;
-        width: 300px;
-        opacity: 0.5;
-    }  
-}
 
-.benifits {
+.benifits-section {
     .container {
         padding: 60px 78px ;
         border-radius: 10px;
@@ -68,140 +63,125 @@ body {
         box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
         transform: translateY(-95px);
     }
-
-    &-items {
-        gap: 100px;
-
-        &__item {
-            width: 300px;
+    @include laptop {
+        .container {
+            transform: translateY(0);
+            box-shadow: none;
+            padding: 60px 16px;
         }
+    }
+}
 
-        &__icon {
+.benifits {
+    gap: 100px;
+
+    &__item {
+        width: 300px;
+
+        &-icon {
             width: 72px;
             height: 72px;
             border-radius: 6px;
             margin-bottom: 26px;
             background-color:rgba(31, 219, 132, 0.1);
-
+    
             img {
                 width: 40px;
                 height: 33px;
             }
         }
 
-        h3 {
-            position: relative;
-            padding-bottom: 28px;
+    }
+    h3 {
+        position: relative;
+        padding-bottom: 28px;
 
-            &::after {
-                content: '';
-                width: 60px;
-                height: 4px;
-                background-color: $secondary-color;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-  
-        }
-
-        p {
-             margin-top: 18px;   
+        &::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: $secondary-color;
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
 
     }
-}
-
-@include laptop {
-    .benifits {
-        .container {
-            transform: translateY(0);
-            box-shadow: none;
-            margin-bottom: 100px;
-            padding: 60px 16px;
-        }
-
-        &-items {
-                gap: 50px;
-            }
+    p {
+         margin-top: 18px;   
     }
-}
+    @include laptop {
+        gap: 50px;
+    }
+    @include tablet {
+        flex-wrap: wrap-reverse;
 
-@include tablet {
-    .benifits {
-        &-items {
-            flex-wrap: wrap-reverse;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
-            &__item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-
-                h3 {
-                    padding-bottom: 0;
-                }
-
-                h3::after {
-                    display: none;
-                }
+            h3 {
+                padding-bottom: 0;
+            }
+            h3::after {
+                display: none;
             }
         }
     }
 }
 
-.pricing {
-    padding-bottom: 200px;
+.pricing-section {
+    padding: 100px 0;
+
     .container {
         flex-direction: column;
         gap: 60px;
     }
-
     h2.title-lg {
         max-width: 800px;
     } 
-    .card-wrap {
+    .pricing {
         gap: 24px;
+        
+        &-toggler {
+            border-radius: 5px;
+            border: solid 1px #aefdd9;    
+            font-size: $base-font-size;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #6fdeaa;
+            background-color: #f1fff8;
+            overflow: hidden;
+            cursor: pointer;
+        }
+    }
+    .monthly {
+        display: inline-block;
+        padding: 20px 35px;
+        border-right: solid 1px #aefdd9;
+    
+        &.active {
+           @include active-price;
+        }
+    }
+    .yearly {
+        padding: 20px 30px 20px 40px;
+    
+        &.active {
+          @include active-price;
+        }
+    }
+    
+    @include laptop {
+        .pricing {
+            flex-wrap: wrap;
+        }
     }
 }
 
-@include laptop {
-    .card-wrap {
-        flex-wrap: wrap;
-    }
-}
-
-.plan-toggler {
-    border-radius: 5px;
-    border: solid 1px #aefdd9;    
-    font-size: $base-font-size;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #6fdeaa;
-    background-color: #f1fff8;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.monthly {
-    display: inline-block;
-    padding: 20px 35px;
-    border-right: solid 1px #aefdd9;
-
-    &.active {
-       @include active-price;
-    }
-}
-
-.yearly {
-    padding: 20px 30px 20px 40px;
-
-    &.active {
-      @include active-price;
-    }
-}
-
-.testimonials {
+.testimonial-section {
     background: url('../images/quote-bg.png') top left / 378px no-repeat, linear-gradient(to right, $primary-color, $primary-color) top right / 60% no-repeat;
     overflow: hidden;
 
@@ -209,19 +189,15 @@ body {
         padding: 70px 0;
     }
 
-    &-cards {
-        gap: 20px;
-        // transform: translateX(40%);  
-    }
-}
-
-.user-name {
-    color: $primary-color;
-    font-weight: bold;
-}
-
-@include responsive(1200) {
     .testimonials {
+        display: flex;
+        gap: 20px;
+        // transform: translateX(25%);  
+        overflow: hidden;
+
+    }
+
+    @include responsive(1200) {
         background: $primary-color;
 
         h2 {
@@ -231,28 +207,29 @@ body {
     }
 }
 
-
-.clients {
+.clients-section {
     padding: 180px 0;
 
     h2 {
         margin-bottom: 45px;
     }
-    &-wrapper {
+    .clients {
         gap: 48px;
         flex-wrap: wrap;
-    }
-}
 
-@include laptop {
-    .clients-wrapper {
-        gap: 30px;
+        li {
+            line-height: 0;
+        }
     }
-}
-
-@include tablet {
-    .clients {
+    @include laptop {
+        .clients {
+            gap: 30px;
+        }
+    }
+    @include tablet {
         padding: 60px 0;
     }
 }
+
+
 

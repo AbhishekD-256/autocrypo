@@ -1,10 +1,7 @@
-.testimonials-cards__card {
-    $container-width: 100%; 
-    $space: 60px;
+.testimonials__card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: calc(#{$container-width} - #{$space} / 5);
     min-height: 500px;
     padding: 80px 60px 63px 50px;
     border-radius: 6px;
@@ -15,7 +12,10 @@
         width: 300px;
         max-width: 100%;
     }
-
+    .user-name {
+        color: $primary-color;
+        font-weight: bold;
+    }    
     &.active {
         color: $text-secondary-color;
         background-color: $secondary-color;
@@ -27,5 +27,9 @@
         .user-name{
             color: $text-secondary-color;
         }
+    }
+    
+    @include tablet {
+        padding: 40px 30px;
     }
 }

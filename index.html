@@ -30,7 +30,7 @@
                 <a href="javascript:void(0)">Login</a>
                 <button class="btn-sm">Register</button>
                 <div class="menu-btn">
-                    <div class="ham-bar"></div>
+                    <span class="ham-bar"></span>
                 </div>
             </div>
         </div>
@@ -59,11 +59,11 @@
             </div>
         </section>
 
-        <section class="benifits">
+        <section class="benifits-section">
             <div class="container">
-                <ul class="benifits-items f-center">
-                    <li class="benifits-items__item">
-                        <figure class="benifits-items__icon  f-center">
+                <ul class="benifits f-center">
+                    <li class="benifits__item">
+                        <figure class="benifits__item-icon  f-center">
                             <img src="assets/images/secure.svg" alt="secure">
                         </figure>
                         <h3 class="text-lg">Secure Every Transaction</h3>
@@ -71,8 +71,8 @@
                             of email, SMS and
                             Google Authenticator.</p>
                     </li>
-                    <li class="benifits-items__item">
-                        <figure class="benifits-items__icon  f-center">
+                    <li class="benifits__item">
+                        <figure class="benifits__item-icon  f-center">
                             <img src="assets/images/ease-use.svg" alt="ease-use">
                         </figure>
                         <h3 class="text-lg">Easiest To Use</h3>
@@ -81,8 +81,8 @@
                             investing
                             or trading.</p>
                     </li>
-                    <li class="benifits-items__item">
-                        <figure class="benifits-items__icon  f-center">
+                    <li class="benifits__item">
+                        <figure class="benifits__item-icon  f-center">
                             <img src="assets/images/fast.svg" alt="fast">
                         </figure>
                         <h3 class="text-lg">Fastest Mining</h3>
@@ -95,18 +95,18 @@
             </div>
         </section>
 
-        <section class="pricing">
+        <section class="pricing-section">
             <div class="container  f-center">
                 <h2 class="title-lg  text-center">Paid plan starts with a 7-day free trial, No credit card required</h2>
-                <div class="plan-toggler  f-center">
+                <div class="pricing-toggler  f-center">
                     <span class="monthly  active  text-up">MONTHLY</span>
                     <span class="yearly  text-up">YEARLY - 2 MONTH FREE</span>
                 </div>
-                <ul class="card-wrap f-center  text-center">
+                <ul class="pricing  f-center  text-center">
                     <li class="pricing__card  f-space">
-                        <div class="pricing__card-header">
+                        <div>
                             <h3 class="text-lg">Starter</h3>
-                            <span class="price">$10</span>
+                            <div class="price">$10</div>
                             <span class="text-md">Per Month</span>
                         </div>
                         <ul class="text-md">
@@ -118,9 +118,9 @@
                     </li>
 
                     <li class="pricing__card  f-space  active">
-                        <div class="pricing__card-header">
+                        <div>
                             <h3 class="text-lg">Professional</h3>
-                            <span class="price">$29</span>
+                            <div class="price">$29</div>
                             <span class="text-md">Per Month</span>
                         </div>
                         <ul class="text-md">
@@ -133,9 +133,9 @@
                     </li>
 
                     <li class="pricing__card  f-space">
-                        <div class="pricing__card-header">
+                        <div>
                             <h3 class="text-lg">Business</h3>
-                            <span class="price">$49</span>
+                            <div class="price">$49</div>
                             <span class="text-md">Per Month</span>
                         </div>
                         <ul class="text-md">
@@ -150,11 +150,11 @@
             </div>
         </section>
 
-        <section class="testimonials">
+        <section class="testimonial-section">
             <div class="container">
                 <h2 class="title-lg">What <br>Customers Say</h2>
-                <ul class="testimonials-cards  f-center">
-                    <li class="testimonials-cards__card  active" data-card="1">
+                <ul class="testimonials">
+                    <li class="testimonials__card  active" data-card="1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
                             <g fill="#1FDB84" fill-rule="evenodd">
                                 <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
@@ -165,13 +165,13 @@
                             make
                             me money. After
                             just about a couple weeks, I saw that this was something I wanted to do permanently.</q>
-                        <div class="user">
+                        <div>
                             <span class="user-name">Brandon Roger /</span>
                             <span>OWW Studio</span>
                         </div>
                     </li>
 
-                    <li class="testimonials-cards__card" data-card="2">
+                    <li class="testimonials__card" data-card="2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
                             <g fill="#1FDB84" fill-rule="evenodd">
                                 <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
@@ -182,13 +182,13 @@
                             Uber
                             has helped with
                             both of those things, plus I’m seeing new parts of the city I’ve never seen before!</q>
-                        <div class="user">
+                        <div>
                             <span class="user-name">Sean Walker /</span>
                             <span>OWW Studio</span>
                         </div>
                     </li>
 
-                    <li class="testimonials-cards__card" data-card="3">
+                    <li class="testimonials__card" data-card="3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
                             <g fill="#1FDB84" fill-rule="evenodd">
                                 <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
@@ -198,13 +198,13 @@
                         <q class="text-md">"Uber enables me to have the creative freedom for baking my cakes and also
                             driving on the side so
                             I can make more money and also have my dream job."</q>
-                        <div class="user">
+                        <div>
                             <span class="user-name">Jenny Harra /</span>
                             <span>OWW Studio</span>
                         </div>
                     </li>
 
-                    <li class="testimonials-cards__card" data-card="4">
+                    <li class="testimonials__card" data-card="4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
                             <g fill="#1FDB84" fill-rule="evenodd">
                                 <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
@@ -216,13 +216,13 @@
                             has helped with
                             both of those things, plus I’m seeing new parts of the city I’ve never seen before!</q>
 
-                        <div class="user">
+                        <div>
                             <span class="user-name">Sean Walker /</span>
                             <span>OWW Studio</span>
                         </div>
 
                     </li>
-                    <li class="testimonials-cards__card" data-card="1">
+                    <li class="testimonials__card" data-card="1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40">
                             <g fill="#1FDB84" fill-rule="evenodd">
                                 <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z" />
@@ -233,42 +233,42 @@
                             make
                             me money. After
                             just about a couple weeks, I saw that this was something I wanted to do permanently.</q>
-                        <div class="user">
+                        <div>
                             <span class="user-name">Brandon Roger /</span>
                             <span>OWW Studio</span>
                         </div>
                     </li>
                 </ul>
                 <div class="dot-wrap  f-center">
-                    <span class="dot  active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="slider-dot  active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
                 </div>
             </div>
         </section>
 
-        <section class="clients">
+        <section class="clients-section">
             <div class="container">
                 <h2 class="text-lg  text-center  text-up">WORKS WITH ANY PLATFORM</h2>
-                <ul class="clients-wrapper f-center">
-                    <li class="clients__img">
+                <ul class="clients  f-center">
+                    <li>
                         <img src="assets/images/amazon.svg" alt="amazon">
                     </li>
-                    <li class="clients__img">
+                    <li>
                         <img src="assets/images/etsy.svg" alt="etsy">
                     </li>
-                    <li class="clients__img">
+                    <li>
                         <img src="assets/images/clickbank.svg" alt="clickbank">
                     </li>
-                    <li class="clients__img">
+                    <li>
                         <img src="assets/images/medium.svg" alt="medium">
                     </li>
-                    <li class="clients__img">
+                    <li>
                         <img src="assets/images/youtube.svg" alt="youtube">
                     </li>
-                    <li class="clients__img">
+                    <li>
                         <img src="assets/images/kickstarter.svg" alt="kickstarter">
                     </li>
                 </ul>
@@ -286,6 +286,7 @@
             <li><a href="javascript:void(0)">Clients</a></li>
         </ul>
     </footer>
+
 </body>
 
 </html>

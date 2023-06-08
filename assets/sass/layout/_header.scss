@@ -1,7 +1,8 @@
 header {
     padding: 25px 0;
     background-color: $primary-color;
-    position: relative;
+    transition: 0.5s;
+
 
     a {
         color: $text-secondary-color;
@@ -33,6 +34,7 @@ header {
             left: 0;
             height: 3px;
             background-color: $secondary-color;
+            transition: all 0.3s ease-in-out;
         }
 
         &::before {
@@ -46,7 +48,19 @@ header {
             
         }
     }
+    &.open {
+        .ham-bar{
+            background: transparent;
 
+            &::before {
+                transform: rotate(45deg) translate(3px, 4px);
+                width: 28px;
+            }
+            &::after {
+                transform: rotate(-45deg) translate(6px, -9px);                
+            }
+        }
+    }
 }
 
 .main-nav ,
@@ -62,7 +76,6 @@ header {
     .main-nav {
         position: absolute;
         right: 0;
-        top: 90px;
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -71,6 +84,7 @@ header {
         overflow: hidden;
         background-color: $primary-color;
         box-shadow: 2px 19px 19px -9px rgba(0,0,0,0.75);
+        transition: all 0.5s ease;
 
         li {
             padding: 15px;
@@ -80,6 +94,9 @@ header {
             }
         }
 
+        &.open {
+            height: 40%;
+        }
     }
 }
 

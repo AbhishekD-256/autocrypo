@@ -82,3 +82,9 @@ header {
 
     }
 }
+
+@include mobile {
+    .button-wrap button.btn-sm {
+        display: none;
+    }
+}

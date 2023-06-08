@@ -93,6 +93,11 @@ button {
   padding: 21px 42px;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 480px) {
+  .btn-lg {
+    padding: 20px 25px;
+  }
+}
 
 .pricing__card {
   border-radius: 10px;
@@ -166,6 +171,11 @@ button {
 .dot-wrap {
   padding: 90px 0;
   gap: 16px;
+}
+@media screen and (max-width: 480px) {
+  .dot-wrap {
+    padding: 40px 0;
+  }
 }
 
 .slider-dot {
@@ -251,6 +261,11 @@ header .logo {
     color: #1fdb84;
   }
 }
+@media screen and (max-width: 480px) {
+  .button-wrap button.btn-sm {
+    display: none;
+  }
+}
 footer {
   padding-bottom: 100px;
 }
@@ -330,6 +345,11 @@ body {
     right: 16px;
     width: 300px;
     opacity: 0.5;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 38px;
   }
 }
 
@@ -493,5 +513,17 @@ body {
 @media screen and (max-width: 768px) {
   .clients-section {
     padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .benifits-section .container {
+    padding: 30px 16px;
+  }
+  .pricing-section, .testimonial-section h2 {
+    padding: 30px 0;
+  }
+  .title-lg {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=main.css.map */

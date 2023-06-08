@@ -52,6 +52,11 @@ body {
             opacity: 0.5;
         }  
     }
+    @include mobile {
+        h1 {
+            font-size: 38px;
+        }
+    }
 }
 
 
@@ -232,4 +237,16 @@ body {
 }
 
 
+@include mobile {
+    .benifits-section .container {
+        padding: 30px 16px;
+    }
 
+    .pricing-section, .testimonial-section h2 {
+        padding: 30px 0;
+    }
+
+    .title-lg {
+        font-size: 30px;
+    }
+}

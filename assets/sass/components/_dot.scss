@@ -2,6 +2,10 @@
 .dot-wrap {
     padding: 90px 0;
     gap: 16px;
+
+    @include mobile {
+        padding: 40px 0;
+    }
 }
 
 .slider-dot {

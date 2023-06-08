@@ -25,4 +25,8 @@
     @extend %btn;
     padding: 21px 42px;
     letter-spacing: 1px;
+
+    @include mobile {
+        padding: 20px 25px;
+    }
 }

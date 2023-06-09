@@ -36,7 +36,8 @@ body {
         margin-bottom: 35px;
     }
     &__banner {
-        width: 400px;
+        align-self: end;
+        width: 380px;
 
         img {
          width: 100%;
@@ -58,27 +59,18 @@ body {
         }
     }
 }
-
-
 .benifits-section {
     .container {
-        padding: 60px 78px ;
-        border-radius: 10px;
-        background-color: $text-secondary-color;
-        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
-        transform: translateY(-95px);
-    }
-    @include laptop {
-        .container {
-            transform: translateY(0);
-            box-shadow: none;
-            padding: 60px 16px;
-        }
+        padding: 0;
     }
 }
-
 .benifits {
     gap: 100px;
+    padding: 60px 78px ;
+    border-radius: 10px;
+    background-color: $text-secondary-color;
+    box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+    transform: translateY(-95px);
 
     &__item {
         width: 300px;
@@ -117,6 +109,9 @@ body {
     }
     @include laptop {
         gap: 50px;
+        transform: translateY(0);
+        box-shadow: none;
+        border-radius: 0;
     }
     @include tablet {
         flex-wrap: wrap-reverse;
@@ -143,6 +138,7 @@ body {
     .container {
         flex-direction: column;
         gap: 60px;
+        
     }
     h2.title-lg {
         max-width: 800px;
@@ -160,6 +156,8 @@ body {
             background-color: #f1fff8;
             overflow: hidden;
             cursor: pointer;
+
+         
         }
     }
     .monthly {
@@ -184,10 +182,15 @@ body {
             flex-wrap: wrap;
         }
     }
+    @include tablet {
+        .offer-period {
+            display: none;
+        }
+    }
 }
 
 .testimonial-section {
-    background: url('../images/quote-bg.png') top left / 378px no-repeat, linear-gradient(to right, $primary-color, $primary-color) top right / 60% no-repeat;
+    background: url('../images/quote-bg.png') top left 120px / 378px no-repeat, linear-gradient(to right, $primary-color, $primary-color) top right / 60% no-repeat;
     overflow: hidden;
 
     h2 {
@@ -198,7 +201,8 @@ body {
         display: flex;
         gap: 20px;
         position: relative;
-        left: 30%;
+        left: 25%;
+        overflow: hidden;
     }
 
     @include responsive(1200) {
@@ -207,6 +211,16 @@ body {
         h2 {
             color: $text-secondary-color;
             text-align: center;
+        }
+    }
+
+    @include tablet {
+        .testimonials {
+            max-width: 500px;
+            position: static;
+            overflow: visible;
+            padding: 0 16px;
+
         }
     }
 }

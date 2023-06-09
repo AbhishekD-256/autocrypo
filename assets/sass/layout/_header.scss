@@ -1,10 +1,14 @@
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
     padding: 25px 0;
-    background-color: $primary-color;
     transition: 0.5s;
 
 
-    a {
+    .#{&}__link {
         color: $text-secondary-color;
     }
 

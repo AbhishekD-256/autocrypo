@@ -5,6 +5,7 @@
     padding: 56px 62px;
     flex-direction: column;
     overflow: hidden;
+    align-self: stretch;
 
     h3 {
         margin-bottom: 31px;
@@ -31,9 +32,14 @@
             
         }
     }
-}
-@include laptop {
-    .pricing__card{
-        box-shadow: 0 1px 2px 0 rgba(48, 58, 71, 0.2);
+
+    @include laptop {
+            box-shadow: 0 1px 2px 0 rgba(48, 58, 71, 0.2);
     }
+
+    @include mobile {
+        padding: 40px 30px;
+    }
+
 }
+
